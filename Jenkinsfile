@@ -8,6 +8,7 @@ node {
     stage('Test') {
         echo "Test stage"
         sh 'pwd'
+    }
     stage('Deploy') {
         echo "Deploy stage"
     }
