@@ -1,15 +1,27 @@
-node {
-    checkout scm
+pipeline {
+    agent any
+
+    parameters {
+        booleanParam name: 'RUN_TESTS', defaultValue: true, description: 'Run Tests?'
+    }
     
-    stage('Build') {
-        echo "Build stage"
-        echo "Build stage"
-    }
-    stage('Test') {
-        echo "Test stage"
-        sh 'pwd'
-    }
-    stage('Deploy') {
-        echo "Deploy stage"
+    stages {
+        stage('Build') {
+            steps {
+                echo "Build stage"
+            }        
+        }
+
+        stage('Test') {
+            steps {
+                echo "Test stage"
+            }        
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "Deploy stage"
+            }        
+        }
     }
 }
