@@ -20,8 +20,14 @@ pipeline {
         }
 
         stage('Test') {
+            when {
+                environment name: 'RUN_TESTS', value: true   
+            }
             steps {
                 echo "Test stage"
+                dir('cpp') {
+                    sh 'Sort.exe 7 8 1'
+                }
             }        
         }
 
