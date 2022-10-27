@@ -9,6 +9,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Build stage"
+                sh 'pwd'
+                dir('cpp') {
+                    sh 'pwd'
+                    dir('build') {
+                        sh 'pwd'
+                    }
+                }
             }        
         }
 
