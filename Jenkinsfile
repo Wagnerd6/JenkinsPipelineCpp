@@ -24,7 +24,7 @@ pipeline {
             }
             steps {
                 echo "Test stage"
-                dir('cpp') {
+                dir('cpp/build') {
                     sh 'ls .'
                     sh './Sort.exe 7 8 1'
                 }
