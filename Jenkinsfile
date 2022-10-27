@@ -10,11 +10,11 @@ pipeline {
             steps {
                 echo "Build stage"
                 sh 'pwd'
-                dir('cpp') {
+                dir('cpp/build') {
                     sh 'pwd'
-                    dir('build') {
-                        sh 'pwd'
-                    }
+                    sh 'cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug ..'
+                    sh 'make'
+                    sh 'ls ..'
                 }
             }        
         }
