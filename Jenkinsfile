@@ -14,7 +14,6 @@ pipeline {
                     sh 'pwd'
                     sh 'cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug ..'
                     sh 'make'
-                    sh 'ls ..'
                 }
             }        
         }
@@ -26,7 +25,7 @@ pipeline {
             steps {
                 echo "Test stage"
                 dir('cpp') {
-                    sh './Sort.exe 7 8 1'
+                    ./Sort.exe 7 8 1
                 }
             }        
         }
