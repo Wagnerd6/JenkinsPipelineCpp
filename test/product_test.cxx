@@ -6,7 +6,7 @@
 using namespace std;
 
 
-TEST(blaTest, test1) {
+TEST(productTest, successful) {
     //arrange
     vector<int> vec1 = {1, 2, 3, 4};
     vector<int> vec2 = {7, 5};
@@ -21,4 +21,14 @@ TEST(blaTest, test1) {
     EXPECT_EQ (product(vec3),  actual3);;
 }
 
+
+TEST(productTest, failed) {
+    //arrange
+    vector<int> vec = {1, 2, 3, 4};
+   
+    //actual
+    int actual = 0;
+    //assert
+    EXPECT_EQ (product(vec),  actual);
+}
 
