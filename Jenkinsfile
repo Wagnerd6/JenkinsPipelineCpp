@@ -10,10 +10,10 @@ pipeline {
             steps {
                 echo "Build stage"
                 sh 'pwd'
-                dir('cpp/build') {
+                dir('build') {
                     sh 'pwd'
                     sh 'cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug ..'
-                    sh 'make'
+                    sh 'cmake --build .'
                 }
             }        
         }
@@ -24,9 +24,9 @@ pipeline {
             }
             steps {
                 echo "Test stage"
-                dir('cpp/build') {
+                dir('build') {
                     sh 'ls .'
-                    sh './Sort.exe 7 8 1'
+                    sh 'bin/Product 7 8 2'
                 }
             }        
         }
