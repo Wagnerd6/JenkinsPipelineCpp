@@ -31,7 +31,6 @@
 *.out
 *.app
 
-lib/*
+# CMakeCache
 CMakeFiles
-build/*
 CMakeCache.txt
