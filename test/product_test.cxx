@@ -27,7 +27,7 @@ TEST(productTest, fixed) {
     vector<int> vec = {1, 2, 3, 4, 5};
    
     //actual
-    int actual = 100;
+    int actual = 120;
     //assert
     EXPECT_EQ (product(vec),  actual);
 }
