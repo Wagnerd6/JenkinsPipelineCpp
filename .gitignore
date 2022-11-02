@@ -31,4 +31,6 @@
 *.out
 *.app
 
+CMakeFiles
 cpp/build/*
+CMakeCache.txt
