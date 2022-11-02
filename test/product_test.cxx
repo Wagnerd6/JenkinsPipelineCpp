@@ -22,12 +22,12 @@ TEST(productTest, successful) {
 }
 
 
-TEST(productTest, failed) {
+TEST(productTest, fixed) {
     //arrange
-    vector<int> vec = {1, 2, 3, 4};
+    vector<int> vec = {1, 2, 3, 4, 5};
    
     //actual
-    int actual = 0;
+    int actual = 100;
     //assert
     EXPECT_EQ (product(vec),  actual);
 }
