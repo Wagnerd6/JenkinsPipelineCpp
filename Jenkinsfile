@@ -2,7 +2,7 @@ node {
     //parameters {
     //    booleanParam name: 'RUN_TESTS', defaultValue: true, description: 'Run Tests?'
     //}
-    echo 'Debug: ${params.RUN_TESTS}'
+    print("Debug: ${params.RUN_TESTS}")
     
     stage('Build') {
         echo "Build stage"
