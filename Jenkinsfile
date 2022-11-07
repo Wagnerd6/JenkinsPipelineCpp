@@ -2,9 +2,10 @@ node {
     //parameters {
     //    booleanParam name: 'RUN_TESTS', defaultValue: true, description: 'Run Tests?'
     //}
+    echo 'Debug: params.RUN_TESTS'
     
     stage('Build') {
-        "Build stage"
+        echo "Build stage"
         'pwd'
         dir('build') {
                     sh 'cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug ..'
