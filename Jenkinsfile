@@ -1,3 +1,4 @@
+@library("TestLibrary") _
 node {
     startPipeline { }
     stage('Build') {
