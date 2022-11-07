@@ -1,9 +1,5 @@
 node {
-    //parameters {
-    //    booleanParam name: 'RUN_TESTS', defaultValue: true, description: 'Run Tests?'
-    //}
-    print("Debug: ${params.RUN_TESTS}")
-    
+    startPipelin { }
     stage('Build') {
         echo "Build stage"
         'pwd'
