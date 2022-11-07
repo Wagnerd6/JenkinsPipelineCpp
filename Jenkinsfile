@@ -2,7 +2,7 @@ node {
     //parameters {
     //    booleanParam name: 'RUN_TESTS', defaultValue: true, description: 'Run Tests?'
     //}
-    echo 'Debug: params.RUN_TESTS'
+    echo 'Debug: ${params.RUN_TESTS}'
     
     stage('Build') {
         echo "Build stage"
@@ -14,9 +14,9 @@ node {
     }
 
         stage('Test') {
-            when {
-                environment name: 'RUN_TESTS', value: 'true'
-            }
+            //when {
+            //    environment name: 'RUN_TESTS', value: 'true'
+            //}
             echo "Test stage"
             dir('build') {
                 sh 'bin/Product 7 8 2'
