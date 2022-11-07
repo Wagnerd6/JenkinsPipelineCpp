@@ -13,14 +13,14 @@ node {
     }
 
         stage('Test') {
-            //when {
-            //    environment name: 'RUN_TESTS', value: 'true'
-            //}
-                echo "Test stage"
-                dir('build') {
-                    sh 'bin/Product 7 8 2'
-                    sh 'bin/Product_test'
-                }     
+            when {
+                environment name: 'RUN_TESTS', value: 'true'
+            }
+            echo "Test stage"
+            dir('build') {
+                sh 'bin/Product 7 8 2'
+                sh 'bin/Product_test'
+            }     
         }
 
         stage('Deploy') {
