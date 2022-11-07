@@ -9,9 +9,8 @@ node {
         dir('build') {
                     sh 'cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug ..'
                     sh 'cmake --build .'
-                }
-            }        
-        }
+        }        
+    }
 
         stage('Test') {
             //when {
