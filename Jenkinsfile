@@ -1,5 +1,5 @@
 node {
-    startPipelin { }
+    startPipeline { }
     stage('Build') {
         echo "Build stage"
         'pwd'
